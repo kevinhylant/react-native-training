@@ -57,7 +57,10 @@ class Slider extends PureComponent {
           <Slide2 />
           <Slide3 />
         </Carousel>
-        <Footer activeIndex={this.state.index} />
+        <Footer
+          onPress={() => this.props.navigation.navigate('signup')}
+          activeIndex={this.state.index}
+        />
       </View>
     )
   }

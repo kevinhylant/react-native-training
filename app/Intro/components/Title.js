@@ -21,16 +21,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  title: {
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
 });
 
 const Title = ({ index }) => {
-  const color = index % 2 === 0 ? 'black' : 'white';
+  styles.title.color = index % 2 === 0 ? 'black' : 'white';
   return (
     <View style={styles.container}>
-      <Text style={{
-        color,
-        fontWeight: 'bold',
-      }}>CLASSPASS</Text>
+      <Text style={styles.title}>CLASSPASS</Text>
     </View>
   )
 };

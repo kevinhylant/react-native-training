@@ -25,9 +25,13 @@ const styles = StyleSheet.create({
   },
 })
 
-const Button = ({ index }) => {
+const Button = ({ index, onPress }) => {
   return (
-    <TouchableHighlight style={styles.button}>
+    <TouchableHighlight
+      onPress={onPress}
+      underlayColor={'#2a747c'}
+      style={styles.button}
+    >
       <Text style={styles.text}>START CLASSPASS</Text>
     </TouchableHighlight>
   )

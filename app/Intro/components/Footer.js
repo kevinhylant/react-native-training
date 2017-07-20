@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     width: '100%',
-    height: 200,
+    height: 140,
     bottom: 0,
     left: 0,
   },
@@ -24,14 +24,14 @@ const dotColor = (index, activeIndex) => {
   return `rgba(63, 178, 191, ${opacity})`;
 }
 
-const Footer = ({ activeIndex }) => {
+const Footer = ({ activeIndex, onPress }) => {
   const dots = [0, 1, 2];
 
   return (
     <View style={styles.container}>
       <Dots activeIndex={activeIndex} />
       <View>
-        <Button />
+        <Button onPress={onPress} />
       </View>
 
       <View>

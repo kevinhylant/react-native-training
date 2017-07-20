@@ -1,0 +1,104 @@
+{
+    "extends": "airbnb",
+    "env": {
+        "browser": true,
+        "node": true,
+        "mocha": true,
+        "es6": true,
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true,
+            "experimentalObjectRestSpread": true,
+        },
+        "ecmaVersion": 6,
+        "sourceType": "module",
+    },
+    "parser": "babel-eslint",
+    "linters": {
+        "eslint": {
+            "args": [
+                "--ignore-path", "~/eslint_ignore",
+                "--rulesdir", "~/rules",
+            ],
+        },
+    },
+    "rules": {
+        "no-underscore-dangle": 0,
+        "global-require": 0,
+        "react/jsx-filename-extension": 0,
+        "react/no-unescaped-entities": 0,
+        "react/require-default-props": 0,
+        "no-plusplus": 0,
+        "no-case-declarations": 0,
+        "keyword-spacing": 0,
+        "react/jsx-uses-react": 2,
+        "react/jsx-uses-vars": 2,
+        "react/react-in-jsx-scope": 2,
+        "react/jsx-quotes": 0,
+        "react/prop-types": 0,
+        "import/default": 0,
+        "import/prefer-default-export": 0,
+        "import/no-duplicates": 0,
+        "import/named": 0,
+        "import/namespace": 0,
+        "import/no-extraneous-dependencies": 0,
+        "import/extensions": 0,
+        "import/no-unresolved": 0,
+        "import/no-named-as-default": 2,
+        "comma-dangle": ["error", {
+            "arrays": "always-multiline",
+            "objects": "always-multiline",
+            "imports": "always-multiline",
+            "exports": "always-multiline",
+            "functions": "ignore",
+        }],
+        "jsx-quotes": 2,
+        "quotes": 0,
+        "indent": [2, 2, {
+            "SwitchCase": 1
+        }],
+        "no-multi-str": 0,
+        "block-scoped-var": 0,
+        "padded-blocks": 0,
+        "no-alert": 0,
+        "arrow-body-style": 0,
+        "max-len": [2, {
+            "code": 150,
+            "tabWidth": 2,
+            "ignoreUrls": true
+        }],
+        "react/jsx-no-bind": [2, {
+            "allowArrowFunctions": true
+        }],
+        "react/jsx-closing-bracket-location": 0,
+        "no-else-return": 2,
+        "react/prefer-stateless-function": 1,
+        "arrow-parens": [1, "as-needed"],
+    },
+    "plugins": [
+        "react", "react-native", "import"
+    ],
+    "settings": {
+        "import/parser": "babel-eslint",
+        "import/resolve": {
+            "moduleDirectory": ["node_modules", "src"],
+        },
+    },
+    "globals": {
+        "__DEVELOPMENT__": true,
+        "__CLIENT__": true,
+        "__SERVER__": true,
+        "__TEST__": true,
+        "__DISABLE_SSR__": true,
+        "__DEVTOOLS__": true,
+        "_": true,
+        "beforeAll": true,
+        "chai": true,
+        "expect": true,
+        "jest": true,
+        "shallow": true,
+        "socket": true,
+        "webpackIsomorphicTools": true,
+    }
+}

@@ -9,8 +9,8 @@ import Signup from "./IntroSignup";
 import Confirmation from "./IntroConfirmation";
 
 const routeConfig = {
-  slider: { screen: Slider },
   signup: { screen: Signup },
+  slider: { screen: Slider },
   confirmation: { screen: Confirmation },
 };
 

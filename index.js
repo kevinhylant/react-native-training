@@ -20,12 +20,25 @@ export default class RNClassPass extends Component {
     loggedIn: false,
   }
 
+  createAccount = () => {
+    console.log('create account called');
+  }
+  
+  subscribe = () => {
+    console.log('create account called');
+  }
+
   render() {
     return (
       <View style={styles.container}>
         {
           !this.state.loggedIn ? (
-            <Intro />
+            <Intro
+              screenProps={{
+                createAccount: this.createAccount,
+                subscribe: this.subscribe,
+              }}
+            />
           ) : (
             <Main />
           )
